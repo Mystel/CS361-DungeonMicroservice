@@ -49,4 +49,4 @@ reply_object = json.loads(decoded_reply)
 
 
 ## UML Diagram
-![UML Diagram]([/repository/cs361uml.png](https://github.com/Mystel/CS361-DungeonMicroservice/blob/aac5e7d0184c48544ed7442befb35d08717e1931/cs361uml.png)https://github.com/Mystel/CS361-DungeonMicroservice/blob/aac5e7d0184c48544ed7442befb35d08717e1931/cs361uml.png)
+![UML Diagram](https://github.com/Mystel/CS361-DungeonMicroservice/blob/main/cs361uml.png?raw=true)
