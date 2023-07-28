@@ -60,7 +60,8 @@ def serverloop():
         test_validity, validity_statement = is_valid(request_dict)
         if test_validity:
             dungeon = generate_dungeon(request_dict["num_of_scenes"], request_dict["scene_range"])
-            message = json.dumps(dungeon)
+            json_dungeon = {'scene_list': dungeon}
+            message = json.dumps(json_dungeon)
             clientsocket.send(bytes(message, "utf-8"))  # must send as bytes
         else:
             clientsocket.send(bytes(validity_statement, "utf-8"))
