@@ -29,8 +29,20 @@ A request can then be made by sending the following message:
 ```py
 dungeon = json.dumps(test_dungeon)
 s.send(bytes(dungeon, "utf-8"))
-reply = s.recv(2048)
-decoded_reply = reply.decode("utf-8")
 ```
 
 ### Receiving Data
+Server replies will be JSON objects formatted as a utf-8 strings and byte-encoded.
+The JSON object will contain a 'scene_list', which a num_of_scenes-length list containing integers in the inclusive range of scene_range.
+For example, the JSON object may contain:
+```py
+reply = {
+  "scene_list": [11, 16, 13, 19, 19, 23, 23, 21, 11, 21, 14, 10]
+}
+```
+The reply can be received and processed using the following code:
+```py
+reply = s.recv(2048)
+decoded_reply = reply.decode("utf-8")
+reply_object = json.loads(decoded_reply)
+```
