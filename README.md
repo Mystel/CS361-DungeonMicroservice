@@ -46,3 +46,7 @@ reply = s.recv(2048)
 decoded_reply = reply.decode("utf-8")
 reply_object = json.loads(decoded_reply)
 ```
+
+
+## UML Diagram
+![UML Diagram](/repository/cs361uml.png)
