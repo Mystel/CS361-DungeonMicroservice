@@ -6,7 +6,7 @@ s.connect((socket.gethostname(), 54545))
 
 test_dungeon = {
     "num_of_scenes": 12,
-    "scene_range": (8, 23)
+    "scene_range": [8, 23]
 }
 
 dungeon = json.dumps(test_dungeon)
