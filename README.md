@@ -22,7 +22,7 @@ For example, the JSON object may contain:
 ```py
 test_dungeon = {
     "num_of_scenes": 12,
-    "scene_range": (8, 23)
+    "scene_range": [8, 23]
 }
 ```
 A request can then be made by sending the following message:
